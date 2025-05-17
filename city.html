@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>City of the Day – Afghan Cultural Showcase</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <header class="gallery-header">
+    <h1>City of the Day</h1>
+    <p>Explore a unique Afghan city featured today for its cultural and natural significance.</p>
+     <nav>
+            <ul class="nav-links">
+                <li><a href="index.html">Homepage</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="city.html" class="active">City of the Day</a></li>
+                <li><a href="submit.html">Submit</a></li>
+            </ul>
+        </nav>
+  </header>
+
+  <main class="featured-city">
+    <div class="featured-box">
+      <div class="city-photo">
+        <img id="slideshow" src="./images/Panjsher1.jpeg" alt="Panjshir Valley">
+      </div>
+      <div class="city-info">
+        <h2>Panjshir – Valley of Strength</h2>
+        <p>Panjshir, nestled in the Hindu Kush mountains, is known for its breathtaking green valleys, historical resistance, and a deeply rooted sense of identity. It's a symbol of Afghan courage and peace.</p>
+
+        <ul class="city-facts">
+          <li><strong>Famous Food:</strong> Panjshiri-style grilled lamb with wild herbs.</li>
+          <li><strong>Traditional Clothes:</strong> Pakol and Destmal.</li>
+          <li><strong>Cultural Highlight:</strong> Panjshir poetry gatherings under open skies.</li>
+        </ul>
+
+        <div class="city-audio">
+          <p><strong>Listen to a traditional Panjshiri song:</strong></p>
+          <audio controls>
+            <source src="PanjsheriSong.mp4" type="audio/mp4">
+          </audio>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <p>© 2025 Afghan Cities Cultural Showcase</p>
+  </footer>
+
+  <script>
+    const images = [
+      "./images/Panjsher1.jpeg",
+      "./images/Panjsher2.jpeg",
+      "./images/Panjsher3.jpeg",
+      "./images/Panjsher4.jpeg"
+    ];
+
+    let index = 0;
+    const slideshow = document.getElementById("slideshow");
+
+    setInterval(() => {
+      index = (index + 1) % images.length;
+      slideshow.src = images[index];
+    }, 10000); // Change every 10 seconds
+  </script>
+</body>
+</html>

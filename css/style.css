@@ -1,0 +1,562 @@
+/* Fonts and Reset */
+body {
+    margin: 0;
+    font-family: "Times New Roman", serif;
+    background-color: #F0F1C5;
+    color: #333;
+}
+.main-title {
+    font-family: 'Georgia', serif;
+    font-size: 3rem;
+    color: #BF9264;
+    animation: fadeIn 2s ease-in;
+}
+.subtitle {
+    font-size: 1.2rem;
+    color: #6F826A;
+    transition: color 0.3s ease-in-out;
+}
+.subtitle:hover {
+    color: #274113;
+}
+
+/* Navigation */
+.nav-links {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+    justify-content: center;
+    padding: 0;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #6F826A;
+    font-weight: bold;
+}
+
+.nav-links a:hover {
+    color: #BF9264;
+}
+
+.nav-links a.active {
+  color: #BF9264;
+}
+
+/* Hero Section */
+.hero-section {
+    text-align: center;
+    padding: 2em;
+    background: linear-gradient(#F0F1C5, #BBD8A3);
+}
+
+/* Intro Section */
+.intro {
+    max-width: 800px;
+    margin: auto;
+    padding: 2em;
+    text-align: center;
+    background-color: #fff;
+    border: 2px solid #BF9264;
+    border-radius: 8px;
+}
+
+/* Featured Cities */
+.featured-cities {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1em;
+    padding: 2em;
+}
+.city-card {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    transition: transform 0.3s;
+}
+.city-card:hover {
+    transform: scale(1.05);
+}
+.city-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.overlay {
+    position: absolute;
+    bottom: 0;
+    background: rgba(111, 130, 106, 0.8);
+    color: white;
+    width: 100%;
+    transform: translateY(100%);
+    transition: transform 0.3s ease-in;
+    padding: 1em;
+}
+.city-card:hover .overlay {
+    transform: translateY(0);
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 1em;
+    background-color: #8B4513;
+    color: white;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* ================================
+   GALLERY PAGE STYLES
+   ================================ */
+
+body {
+  font-family: "Times New Roman", serif;
+  background-color: #F0F1C5;
+  margin: 0;
+  padding: 0;
+}
+
+.gallery-header {
+  text-align: center;
+  padding: 2em;
+  background: #BBD8A3;
+  font-family: 'Georgia', serif;
+  color: #6F826A;
+  position: relative;
+}
+
+.back-button {
+  display: inline-block;
+  margin-top: 1em;
+  background-color: #6F826A;
+  color: white;
+  padding: 0.5em 1em;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+.gallery-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+  padding: 2em;
+  max-width: 1000px;
+  margin: auto;
+}
+
+.flex-card {
+  display: flex;
+  flex-wrap: wrap;
+  background: #fff;
+  border: 2px solid #BF9264;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.card-left {
+  flex: 1 1 320px;
+  max-width: 320px;
+  background: #eee;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.image-frame {
+  width: 100%;
+  height: 240px;
+  position: relative;
+}
+
+.image-option {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: none;
+}
+
+.image-option img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.card-right {
+  flex: 2 1 400px;
+  padding: 1.5em;
+  font-family: "Times New Roman", serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.card-content {
+  margin-bottom: 1em;
+}
+
+.text-block {
+  display: none;
+}
+
+.text-block h2 {
+  font-family: 'Georgia', serif;
+  color: #6F826A;
+  margin-top: 0;
+}
+
+.text-block p {
+  font-size: 1rem;
+  color: #333;
+}
+
+.text-block .quote {
+  font-style: italic;
+  margin-top: 0.5em;
+  color: #BF9264;
+}
+
+.text-block code {
+  font-family: Consolas, monospace;
+  background-color: #f0e0c5;
+  padding: 0.1em 0.3em;
+  border-radius: 4px;
+}
+
+.card-buttons {
+  text-align: right;
+}
+
+.card-buttons label {
+  background-color: #6F826A;
+  color: white;
+  padding: 0.5em 1em;
+  margin-left: 10px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.3s;
+}
+
+.card-buttons label:hover {
+  background-color: #BF9264;
+}
+
+footer {
+  text-align: center;
+  padding: 1em;
+  background-color: #8B4513;
+  color: white;
+  margin-top: 3em;
+}
+
+/* Show correct image and text when radio is selected */
+/* Kabul */
+#kabul-overview:checked ~ .card-left .overview,
+#kabul-food:checked ~ .card-left .food,
+#kabul-clothes:checked ~ .card-left .clothes,
+#kabul-overview:checked ~ .card-right .overview,
+#kabul-food:checked ~ .card-right .food,
+#kabul-clothes:checked ~ .card-right .clothes {
+  display: block;
+}
+
+/* Herat */
+#herat-overview:checked ~ .card-left .overview,
+#herat-food:checked ~ .card-left .food,
+#herat-clothes:checked ~ .card-left .clothes,
+#herat-overview:checked ~ .card-right .overview,
+#herat-food:checked ~ .card-right .food,
+#herat-clothes:checked ~ .card-right .clothes {
+  display: block;
+}
+
+/* Bamiyan */
+#bamiyan-overview:checked ~ .card-left .overview,
+#bamiyan-food:checked ~ .card-left .food,
+#bamiyan-clothes:checked ~ .card-left .clothes,
+#bamiyan-overview:checked ~ .card-right .overview,
+#bamiyan-food:checked ~ .card-right .food,
+#bamiyan-clothes:checked ~ .card-right .clothes {
+  display: block;
+}
+
+/* Kandahar */
+#kandahar-overview:checked ~ .card-left .overview,
+#kandahar-food:checked ~ .card-left .food,
+#kandahar-clothes:checked ~ .card-left .clothes,
+#kandahar-overview:checked ~ .card-right .overview,
+#kandahar-food:checked ~ .card-right .food,
+#kandahar-clothes:checked ~ .card-right .clothes {
+  display: block;
+}
+
+/* Mazar */
+#mazar-overview:checked ~ .card-left .overview,
+#mazar-food:checked ~ .card-left .food,
+#mazar-clothes:checked ~ .card-left .clothes,
+#mazar-overview:checked ~ .card-right .overview,
+#mazar-food:checked ~ .card-right .food,
+#mazar-clothes:checked ~ .card-right .clothes {
+  display: block;
+}
+
+/* Badakhshan */
+#badakhshan-overview:checked ~ .card-left .overview,
+#badakhshan-food:checked ~ .card-left .food,
+#badakhshan-clothes:checked ~ .card-left .clothes,
+#badakhshan-overview:checked ~ .card-right .overview,
+#badakhshan-food:checked ~ .card-right .food,
+#badakhshan-clothes:checked ~ .card-right .clothes {
+  display: block;
+}
+
+/* Kabul Buttons */
+#kabul-overview:checked ~ .card-right .card-buttons label[for="kabul-overview"],
+#kabul-food:checked ~ .card-right .card-buttons label[for="kabul-food"],
+#kabul-clothes:checked ~ .card-right .card-buttons label[for="kabul-clothes"] {
+  background-color: #BF9264;
+  color: white;
+}
+
+/* Herat Buttons */
+#herat-overview:checked ~ .card-right .card-buttons label[for="herat-overview"],
+#herat-food:checked ~ .card-right .card-buttons label[for="herat-food"],
+#herat-clothes:checked ~ .card-right .card-buttons label[for="herat-clothes"] {
+  background-color: #BF9264;
+  color: white;
+}
+
+/* Bamiyan Buttons */
+#bamiyan-overview:checked ~ .card-right .card-buttons label[for="bamiyan-overview"],
+#bamiyan-food:checked ~ .card-right .card-buttons label[for="bamiyan-food"],
+#bamiyan-clothes:checked ~ .card-right .card-buttons label[for="bamiyan-clothes"] {
+  background-color: #BF9264;
+  color: white;
+}
+
+/* Kandahar Buttons */
+#kandahar-overview:checked ~ .card-right .card-buttons label[for="kandahar-overview"],
+#kandahar-food:checked ~ .card-right .card-buttons label[for="kandahar-food"],
+#kandahar-clothes:checked ~ .card-right .card-buttons label[for="kandahar-clothes"] {
+  background-color: #BF9264;
+  color: white;
+}
+
+/* Mazar Buttons */
+#mazar-overview:checked ~ .card-right .card-buttons label[for="mazar-overview"],
+#mazar-food:checked ~ .card-right .card-buttons label[for="mazar-food"],
+#mazar-clothes:checked ~ .card-right .card-buttons label[for="mazar-clothes"] {
+  background-color: #BF9264;
+  color: white;
+}
+
+/* Badakhshan Buttons */
+#badakhshan-overview:checked ~ .card-right .card-buttons label[for="badakhshan-overview"],
+#badakhshan-food:checked ~ .card-right .card-buttons label[for="badakhshan-food"],
+#badakhshan-clothes:checked ~ .card-right .card-buttons label[for="badakhshan-clothes"] {
+  background-color: #BF9264;
+  color: white;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 1em;
+  background-color: #8B4513;
+  color: white;
+  margin-top: 3em;
+}
+
+/* ========================
+   CITY OF THE DAY STYLES
+   ======================== */
+
+.featured-city {
+  max-width: 900px;
+  margin: 3em auto;
+  padding: 2em;
+  background-color: #fff;
+  border: 2px solid #BF9264;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.featured-box {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2em;
+}
+
+.city-photo {
+  flex: 1 1 300px;
+  max-width: 400px;
+  height: 260px;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.city-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s;
+}
+
+.city-photo img:hover {
+  transform: scale(1.03);
+}
+
+.city-info {
+  flex: 2 1 400px;
+}
+
+.city-info h2 {
+  font-family: 'Georgia', serif;
+  color: #6F826A;
+  margin-top: 0;
+}
+
+.city-info p {
+  font-size: 1.1rem;
+  margin-bottom: 1em;
+  color: #333;
+}
+
+.city-facts {
+  list-style: disc inside;
+  font-size: 1rem;
+  color: #444;
+}
+
+.city-facts li {
+  margin-bottom: 0.5em;
+}
+
+/* AUDIO PLAYER */
+.city-audio {
+  margin-top: 1.5em;
+  background-color: #F0F1C5;
+  padding: 1em;
+  border-radius: 10px;
+  text-align: center;
+  font-family: "Times New Roman", serif;
+}
+
+.city-audio p {
+  margin-bottom: 0.5em;
+  font-weight: bold;
+  color: #6F826A;
+}
+
+/* ========================
+   SUBMIT PAGE STYLES
+   ======================== */
+
+.submit-section {
+  max-width: 700px;
+  margin: 3em auto;
+  padding: 2em;
+  background-color: #fff;
+  border: 2px solid #BF9264;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.submit-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+
+.submit-form label {
+  font-weight: bold;
+  color: #6F826A;
+}
+
+.submit-form input,
+.submit-form textarea {
+  font-family: "Times New Roman", serif;
+  padding: 0.8em;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+  transition: border 0.3s, box-shadow 0.3s;
+}
+
+.submit-form input:focus,
+.submit-form textarea:focus {
+  outline: none;
+  border-color: #DAA520;
+  box-shadow: 0 0 5px rgba(218, 165, 32, 0.5);
+}
+
+.submit-form button {
+  background-color: #6F826A;
+  color: white;
+  padding: 0.8em 1em;
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.submit-form button:hover {
+  background-color: #BF9264;
+}
+
+/* Social Footer */
+.social-footer {
+  margin-top: 3em;
+  text-align: center;
+}
+
+.social-footer p {
+  margin: 0.5em 0;
+  color: #6F826A;
+  font-weight: bold;
+}
+
+.social-icons {
+  margin: 0.5em 0 1em 0;
+}
+
+.social-icons a {
+  margin: 0 10px;
+  color: #6F826A;
+  background-color: #E3E7D3;
+  border-radius: 50%;
+  padding: 12px;
+  display: inline-block;
+  transition: background 0.3s, transform 0.3s;
+  font-size: 18px;
+}
+
+.social-icons a:hover {
+  background-color: #BF9264;
+  transform: scale(1.2);
+}
+
+.social-icons i {
+  font-size: 18px;
+}
+
+.social-footer a {
+  color: #8B4513;
+  text-decoration: none;
+}
+
+.social-footer a:hover {
+  text-decoration: underline;
+}
